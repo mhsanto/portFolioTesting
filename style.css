@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --font-Bebas: 'Bebas Neue', cursive;
+    --font-monserrat: 'Montserrat', sans-serif;
+}
+body {
+   
+    font-family:var(--font-monserrat);
+
+}
+
+.container-fluid {
+    background: url("images/bg1.png");
+    /* background-color: black; */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .7);
+    clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 50% 92%, 33% 94%, 0 100%, 0% 43%, 0 0);
+
+
+
+}
+.logo a{
+    font-size: 2rem;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+nav{
+    position:sticky;
+    top: 0;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+nav ul li.drop {
+    position: relative;
+}
+header .contaner nav ul li.drop ul {
+    position: absolute;
+    top: 20px;
+    left: -5%;
+    width: 150px;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgb(46, 45, 45);
+    display: none;
+}
+header .contaner nav ul li.drop:hover > ul {
+    display: flex;
+    transition: all .3s linear;
+}
+/* navbar items  */
+.navbar-nav {
+    display: flex;
+}
+
+.nav-link {
+    font-size: .8rem;
+    padding: 1rem;
+    align-content: space-around;
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+
+}
+
+.nav-link::before {
+    content: "";
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    background-color: white;
+    top: 90%;
+    right: 10%;
+    transition: .44s;
+    opacity: 0;
+}
+.active::after{
+    content: "";
+    height: 2px;
+    width: 80%;
+    position: absolute;
+    background-color: white;
+    top: 80%;
+    right: 10%;
+    transition: .44s;
+}
+.nav-link:hover::before {
+    width: 80%;
+    top: 80%;
+    opacity: 1;
+}
+/* navbar ends */
+/* Home section starts */
+#home{
+   position: absolute;
+   top: 50%;
+
+   
+}
+.greeting{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    color: white;
+}
+.greeting1{
+    font-size: 70px;
+    color: white;
+    text-transform: uppercase;
+}
+/* home ends */
+/* about me starts---------- */
+#about{
+    height: 80vh;
+    clip-path: ellipse(65% 62% at 50% 38%);
+
+}
+.container  img{
+    width: 90%;
+    height:auto;
+    object-fit: cover;
+    aspect-ratio: 553/643;
+    box-shadow: 15px 15px 0 1px gray;
+
+}
+#about .container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+.content{
+    color: black;
+    text-transform: capitalize;
+
+}
+.content p{
+    width: 90%;
+    margin-top: 2rem;
+    line-height: 2.5rem;
+}
+.content h3{
+    display: inline-block;
+}
+.content span i{
+ font-size: 1.3rem;
+ padding: .8rem;
+ transition: .4s;
+}
+.content span i:hover{
+    color: turquoise;
+}
+/* about me ends here-------- */
+/* services start here----------------- */
+.title{
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    width: 197px;
+    height: 3px;
+    right: 0;
+    left: 42%;
+    bottom: 0;
+    background-color: black;
+}
+#services .container{
+    height: 100vh;
+}
+#services .cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+.card{
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid black;
+    transition: .4s;
+}
+.card .card-body h1{
+    margin-bottom: 1rem;
+}
+.card:hover{
+    transform: scaleY(1.1);
+}
