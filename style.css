@@ -152,7 +152,7 @@ nav header {
 
 .navbar a {
   text-transform: uppercase;
-  font-size: clamp(0.8rem, 1.5vw,1.3rem);
+  font-size: clamp(0.8rem, 1vw + .2rem,1.2rem);
   color: white;
 }
 .ham {
@@ -230,7 +230,7 @@ nav header {
 /* about me starts---------- */
 #about {
   height: 70vh;
-  margin-top: 5rem;
+  margin: 5rem;
 }
 .container .profile-picture img {
   width: 300px;
@@ -253,11 +253,15 @@ nav header {
   text-align: center;
   padding: 0 0.8rem 0 0;
 }
+.profile-picture img{
+  box-shadow: 13px 15px rgba(0, 0, 0, 0.5);
+
+}
 .content {
   width: 60%;
 }
 .content h2 {
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  font-size: clamp(1.5rem, 1.2vw + .5rem, 2rem);
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -446,11 +450,13 @@ nav header {
   }
   #about {
     height: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+  #about .about-me{
+    padding: 0;
   }
 
   .content {
-    padding: 1.5rem;
     order: 1;
     text-align: center;
     width: 100%;
